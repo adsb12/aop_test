@@ -1,0 +1,11 @@
+<!-- AspectJ에서 load-time weaving 사용 시 활성화를 위한 설정 -->
+<!-- aspect 들이 위치한 디렉토리와, 주입 대상 타켓들이 위치한 디렉토리를 include 한다 -->
+<aspectj>
+    <aspects>
+        <aspect name="aspectj.aspect.LogAspect"/> <!-- LogAspect -->
+        <weaver options="-verbose -showWeaveInfo">
+            <include within="aspectj.aspect.*"/>
+            <include within="aspectj.targets.*"/>
+        </weaver>
+    </aspects>
+</aspectj>
